@@ -1,10 +1,11 @@
 import React from "react";
 import { Link, NavLink, Outlet } from "react-router";
 import { CiDeliveryTruck } from "react-icons/ci";
-import { FaCreditCard, FaUsers } from "react-icons/fa";
+import { FaCreditCard, FaTasks, FaUsers } from "react-icons/fa";
 import { FaMotorcycle } from "react-icons/fa6";
 import useRole from "../hooks/useRole";
 import { RiEBikeFill } from "react-icons/ri";
+import { MdOutlineTaskAlt } from "react-icons/md";
 
 const DashboardLayout = () => {
   const { role } = useRole();
@@ -95,6 +96,38 @@ const DashboardLayout = () => {
                 <span className="is-drawer-close:hidden">Payment History</span>
               </NavLink>
             </li>
+            {role === "rider" && (
+              <>
+                <li>
+                  <NavLink
+                    className="is-drawer-close:tooltip is-drawer-close:tooltip-right"
+                    data-tip="Assigned Deliveries"
+                    to={"/dashboard/assigned-deliveries"}
+                  >
+                    <FaTasks />
+
+                    <span className="is-drawer-close:hidden">
+                      Assigned Deliveries
+                    </span>
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    className="is-drawer-close:tooltip is-drawer-close:tooltip-right"
+                    data-tip="Completed Deliveries"
+                    to={"/dashboard/completed-deliveries"}
+                  >
+                    <MdOutlineTaskAlt />
+
+                    <span className="is-drawer-close:hidden">
+                      Completed Deliveries
+                    </span>
+                  </NavLink>
+                </li>
+              </>
+            )}
+
+            {/* admin only links  */}
             {role === "admin" && (
               <>
                 <li>
