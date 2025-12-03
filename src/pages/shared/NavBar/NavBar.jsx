@@ -1,21 +1,41 @@
 import React from "react";
 import Logo from "../../../components/Logo/Logo";
 
-import { NavLink } from "react-router";
+import { Link, NavLink } from "react-router";
+import useAuth from "../../../hooks/useAuth";
 
 const NavBar = () => {
+  const { user, logOut } = useAuth();
+  const handleLogOut = () => {
+    logOut()
+      .then()
+      .catch((error) => console.log(error));
+  };
   const links = (
     <>
       <li>
         <NavLink to={""}>Services</NavLink>
       </li>
       <li>
-        <NavLink to={""}>Services</NavLink>
+        <NavLink to={""}>About us</NavLink>
       </li>
+      <li>
+        <NavLink to={"/send-parcel"}>Send Parcel</NavLink>
+      </li>
+      <li>
+        <NavLink to={"/coverage"}>Coverage</NavLink>
+      </li>
+      {user && (
+        <>
+          <li>
+            <NavLink to={"/dashboard/my-parcels"}>My Parcels</NavLink>
+          </li>
+        </>
+      )}
     </>
   );
   return (
-    <div className="navbar bg-base-100 shadow-sm">
+    <div className="navbar bg-base-100 shadow-sm px-8 py-5 rounded-2xl">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -42,15 +62,26 @@ const NavBar = () => {
             {links}
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">
+        <button className="btn btn-ghost text-xl">
           <Logo></Logo>
-        </a>
+        </button>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{links}</ul>
       </div>
       <div className="navbar-end">
-        <a className="btn">Button</a>
+        {user ? (
+          <button onClick={handleLogOut} className="btn">
+            Log Out
+          </button>
+        ) : (
+          <Link to={"/login"} className="btn">
+            Log in
+          </Link>
+        )}
+        <Link to={"/rider"} className="mx-4 btn btn-primary text-black">
+          Be a rider
+        </Link>
       </div>
     </div>
   );
