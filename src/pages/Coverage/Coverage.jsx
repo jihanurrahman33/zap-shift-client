@@ -19,7 +19,7 @@ const Coverage = () => {
   };
   const position = [23.8041, 90.4152];
   return (
-    <div>
+    <div className="p-8">
       <h2 className="text-5xl">We are available in 64 districts</h2>
       <div>
         <form onSubmit={handleSearch}>
