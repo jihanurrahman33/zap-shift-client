@@ -42,9 +42,9 @@ const OurServices = () => {
     },
   ];
   return (
-    <div className="px-5 py-2 md:px-40 md:py-24 lg:px-40 lg:py-24  rounded-4xl mt-24 bg-secondary text-center text-white">
-      <div className="p-4 md:px-60 lg:px-60 mb-4">
-        <h1 className="text-4xl font-extrabold mt-2.5">Our Services</h1>
+    <div className="px-4 py-6 md:px-16 md:py-16 lg:px-24 lg:py-24 rounded-4xl mt-12 md:mt-24 bg-secondary text-center text-white">
+      <div className="p-4 md:px-12 lg:px-40 mb-4">
+        <h1 className="text-2xl md:text-4xl font-extrabold mt-2.5">Our Services</h1>
         <p className="text-sm ">
           Enjoy fast, reliable parcel delivery with real-time tracking and zero
           hassle. From personal packages to business shipments — we deliver on

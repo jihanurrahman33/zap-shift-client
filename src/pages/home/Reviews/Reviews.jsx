@@ -8,8 +8,8 @@ const Reviews = ({ reviewsPromise }) => {
 
   return (
     <div className="my-24">
-      <div className="text-center mb-24">
-        <h3 className="text-3xl text-center font-bold my-8">Reviews</h3>
+      <div className="text-center mb-12 md:mb-24 px-4">
+        <h3 className="text-2xl md:text-3xl text-center font-bold my-4 md:my-8">Reviews</h3>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis,
           fuga deserunt vel animi quisquam libero optio reprehenderit, tenetur
@@ -23,10 +23,14 @@ const Reviews = ({ reviewsPromise }) => {
           effect={"coverflow"}
           grabCursor={true}
           centeredSlides={true}
-          slidesPerView={3}
+          slidesPerView={1}
           autoplay={{
             delay: 2000,
             disableOnInteraction: false,
+          }}
+          breakpoints={{
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
           }}
           coverflowEffect={{
             rotate: 30,

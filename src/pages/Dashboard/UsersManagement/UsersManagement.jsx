@@ -56,7 +56,7 @@ const UsersManagement = () => {
   };
   return (
     <div>
-      <h2 className="text-4xl">Manage Users: {users.length}</h2>
+      <h2 className="text-2xl md:text-4xl mb-4">Manage Users: {users.length}</h2>
       <label className="input">
         <svg
           className="h-[1em] opacity-50"

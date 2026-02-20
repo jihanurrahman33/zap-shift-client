@@ -20,7 +20,7 @@ const Coverage = () => {
   const position = [23.8041, 90.4152];
   return (
     <div className="p-8">
-      <h2 className="text-5xl">We are available in 64 districts</h2>
+      <h2 className="text-3xl md:text-5xl mb-4">We are available in 64 districts</h2>
       <div>
         <form onSubmit={handleSearch}>
           <label className="input">
@@ -50,13 +50,13 @@ const Coverage = () => {
         </form>
       </div>
 
-      <div className="border w-full h-[800px]">
+      <div className="border w-full h-[400px] md:h-[600px] lg:h-[800px] mt-4">
         <MapContainer
           ref={mapRef}
           center={position}
           zoom={8}
           scrollWheelZoom={false}
-          className="h-[800px]"
+          className="h-full"
         >
           <TileLayer
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

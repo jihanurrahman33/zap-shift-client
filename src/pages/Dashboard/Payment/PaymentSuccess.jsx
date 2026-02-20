@@ -22,10 +22,12 @@ const PaymentSuccess = () => {
     }
   }, [sessionId, axiosSecure]);
   return (
-    <div>
-      <h2 className="text-4xl">Payment Successful</h2>
-      <p>Your Transaction Id: {paymentInfo.transactionId}</p>
-      <p>Your Parcel Tracking Id: {paymentInfo.trackingId}</p>
+    <div className="flex flex-col items-center justify-center py-10">
+      <div className="card bg-base-100 shadow-xl p-6 md:p-10 max-w-lg w-full text-center">
+        <h2 className="text-2xl md:text-4xl font-bold text-green-500 mb-4">Payment Successful</h2>
+        <p className="text-sm md:text-base mb-2">Your Transaction Id: <span className="font-semibold">{paymentInfo.transactionId}</span></p>
+        <p className="text-sm md:text-base">Your Parcel Tracking Id: <span className="font-semibold">{paymentInfo.trackingId}</span></p>
+      </div>
     </div>
   );
 };

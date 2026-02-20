@@ -40,7 +40,9 @@ const DashboardLayout = () => {
           <div className="px-4">Zap Shift Dashboard</div>
         </nav>
         {/* Page content here */}
-        <Outlet></Outlet>
+        <div className="p-4 md:p-6">
+          <Outlet></Outlet>
+        </div>
       </div>
 
       <div className="drawer-side is-drawer-close:overflow-visible">

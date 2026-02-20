@@ -7,17 +7,17 @@ import bannerImg3 from "../../../assets/banner/banner3.png";
 
 const Banner = () => {
   return (
-    <div className="mt-8">
+    <div className="mt-4 md:mt-8">
       <Carousel autoPlay={true} infiniteLoop={true}>
         <div>
           <img src={bannerImg1} />
           <div className="relative ">
-            <button className="btn btn-primary text-black rounded-full absolute bottom-18 left-14">
+            <button className="btn btn-xs sm:btn-sm md:btn-md btn-primary text-black rounded-full absolute bottom-6 sm:bottom-12 md:bottom-18 left-4 sm:left-8 md:left-14">
               Track Your Parcel
             </button>
           </div>
           <div className="relative ">
-            <button className="btn btn-primary text-black rounded-full absolute bottom-18 left-50">
+            <button className="btn btn-xs sm:btn-sm md:btn-md btn-primary text-black rounded-full absolute bottom-6 sm:bottom-12 md:bottom-18 left-36 sm:left-40 md:left-50">
               Be A Rider
             </button>
           </div>

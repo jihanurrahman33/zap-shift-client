@@ -31,8 +31,8 @@ const HowItWorks = () => {
   ];
   return (
     <div className="mt-12">
-      <h1 className="text-3xl font-extrabold mb-8">How it Works</h1>
-      <div className="grid grid-cols-1 md:flex lg:flex gap-4 ">
+      <h1 className="text-2xl md:text-3xl font-extrabold mb-8">How it Works</h1>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         {cardData.map((data, index) => (
           <Card key={index} data={data}></Card>
         ))}

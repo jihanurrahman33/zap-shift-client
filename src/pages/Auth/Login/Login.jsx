@@ -24,7 +24,7 @@ const Login = () => {
       .catch((error) => console.log(error));
   };
   return (
-    <div className="my-4 card bg-base-100 w-full mx-auto max-w-sm shrink-0 shadow-2xl">
+    <div className="my-4 card bg-base-100 w-full mx-4 md:mx-auto max-w-sm shrink-0 shadow-2xl">
       <h3 className="mt-4 text-3xl text-center">Welcome Back</h3>
       <p className="text-center">Please Login</p>
       <form onSubmit={handleSubmit(handleLogin)} className="card-body">

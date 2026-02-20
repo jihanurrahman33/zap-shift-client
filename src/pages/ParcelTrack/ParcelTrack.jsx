@@ -15,12 +15,12 @@ const ParcelTrack = () => {
   });
   return (
     <div className="p-4">
-      <h2 className="text-4xl">Track Your Package: {trackingId}</h2>
+      <h2 className="text-2xl md:text-4xl">Track Your Package: {trackingId}</h2>
       <p>Logs so far: {trackings.length}</p>
       <ul className="timeline timeline-vertical">
         {trackings.map((log) => (
           <li key={log._id}>
-            <div className="timeline-sart">
+            <div className="timeline-start">
               {new Date(log.createdAt).toLocaleString()}
             </div>
             <div className="timeline-middle">

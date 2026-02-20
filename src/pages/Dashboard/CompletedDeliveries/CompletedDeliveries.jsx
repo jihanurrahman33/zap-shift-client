@@ -25,7 +25,7 @@ const CompletedDeliveries = () => {
   };
   return (
     <div>
-      <h2 className="text-4xl">Completed Deliveries: {parcels.length}</h2>
+      <h2 className="text-2xl md:text-4xl">Completed Deliveries: {parcels.length}</h2>
       <div className="overflow-x-auto">
         <table className="table table-zebra">
           {/* head */}

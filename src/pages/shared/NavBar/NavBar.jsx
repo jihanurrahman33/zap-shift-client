@@ -40,7 +40,7 @@ const NavBar = () => {
     </>
   );
   return (
-    <div className="navbar bg-base-100 shadow-sm px-8 py-5 rounded-2xl">
+    <div className="navbar bg-base-100 shadow-sm px-3 md:px-8 py-3 md:py-5 rounded-2xl">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -62,7 +62,7 @@ const NavBar = () => {
           </div>
           <ul
             tabIndex="-1"
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-50 mt-3 w-52 p-2 shadow"
           >
             {links}
           </ul>
@@ -74,18 +74,19 @@ const NavBar = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{links}</ul>
       </div>
-      <div className="navbar-end">
+      <div className="navbar-end gap-2">
         {user ? (
-          <button onClick={handleLogOut} className="btn">
+          <button onClick={handleLogOut} className="btn btn-sm md:btn-md">
             Log Out
           </button>
         ) : (
-          <Link to={"/login"} className="btn">
+          <Link to={"/login"} className="btn btn-sm md:btn-md">
             Log in
           </Link>
         )}
-        <Link to={"/rider"} className="mx-4 btn btn-primary text-black">
-          Be a rider
+        <Link to={"/rider"} className="btn btn-sm md:btn-md btn-primary text-black">
+          <span className="hidden sm:inline">Be a rider</span>
+          <span className="sm:hidden">Rider</span>
         </Link>
       </div>
     </div>

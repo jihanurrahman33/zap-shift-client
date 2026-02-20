@@ -2,9 +2,9 @@ import React from "react";
 
 const Faqs = () => {
   return (
-    <div>
+    <div className="px-4">
       <div className="text-center my-10">
-        <h1 className="text-center text-2xl font-bold">
+        <h1 className="text-center text-xl md:text-2xl font-bold">
           Frequently Asked Question (FAQ)
         </h1>
         <p>

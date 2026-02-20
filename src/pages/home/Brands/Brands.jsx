@@ -17,15 +17,19 @@ const Brands = () => {
         We've helped thousands of sales teams
       </h3>
       <Swiper
-        slidesPerView={4}
+        slidesPerView={2}
         centeredSlides={true}
-        spaceBetween={30}
+        spaceBetween={20}
         grabCursor={true}
         loop={true}
         modules={[Autoplay]}
         autoplay={{
           delay: 1000,
           disableOnInteraction: false,
+        }}
+        breakpoints={{
+          640: { slidesPerView: 3, spaceBetween: 25 },
+          1024: { slidesPerView: 4, spaceBetween: 30 },
         }}
         pagination={{
           clickable: true,

@@ -82,10 +82,10 @@ const SendParcel = () => {
   const receiverRegion = useWatch({ control, name: "receiverRegion" });
   return (
     <div>
-      <h2 className="text-5xl font-bold">Send A Parcel</h2>
+      <h2 className="text-3xl md:text-5xl font-bold">Send A Parcel</h2>
       <form
         onSubmit={handleSubmit(handleSendParcel)}
-        className="mt-12 p-4 text-black"
+        className="mt-8 md:mt-12 p-4 text-black"
       >
         {/* parcel type  */}
         <div>
